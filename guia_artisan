@@ -1,0 +1,18 @@
+php artisan (Mostra todos os comandos)
+
+php artisan {comando} --help (mostra todos os subcomandos)
+
+php artisan route:list (Lista de rotas da aplicação)  OBS:(-v mostra todos os detalhes das rotas)
+
+php artisan route:list --except-vendor (Lista de rotas da aplicação exceto as geradas automáticamente) 
+
+Se tiver muitas Rotas:
+{
+php artisan route:cache
+php artisan route:clear
+}
+
+php artisan make:controller ShowCarController --invokable (Para criar um controller para uma unica ação)
+OBS: We can also use a public method in the CarController named __invoke, its the same thing.
+
+php artisan make:controller ProductController --resource (Cria um Controller para recursos, CRUD)
