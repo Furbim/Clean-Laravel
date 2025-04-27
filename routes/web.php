@@ -58,25 +58,3 @@ Route::prefix('admin')->group(function(){
     })->where('username','[a-z]+');
 });
 
-// Route::fallback(function(){
-//     return to_route('about');
-// });
-
-Route::get('/soma/{num1}/{num2}', function(float $num1, float $num2){
-
-    return ($num1 + $num2);
-
-})->whereNumber(['num1','num2']);
-
-
-
-Route::controller(CarController::class)->group(function(){
-    Route::get('/car', 'index');
-    Route::get('/my-car', 'list-my-cars');
-});
-
-Route::get('/car/invokable',CarController::class);
-
-
-Route::resource('/product',ProductController::class)
-->except('destroy'); 
